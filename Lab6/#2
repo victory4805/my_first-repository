@@ -1,0 +1,24 @@
+class Vehicle:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+        
+    def get_info(self):
+        return f"Марка: {self.make}, Модель: {self.model}" #информация о транспортном средстве
+    
+class Car(Vehicle):
+    def __init__(self, make, model, fuel_type):
+        super().__init__(make, model) #конструктор родительского класса
+        self.fuel_type = fuel_type   
+    
+    def get_info(self): #информация о транспортном средстве и топливе
+        base_info = super().get_info()
+        return f"{base_info}, Тип топлива: {self.fuel_type}"
+
+vehicle = Vehicle("VAZ", "2110")
+
+car1 = Car("Tesla", "Model 3", "электричество")
+car2 = Car("VAZ","2110", "Бензин")
+
+print(vehicle.get_info())  
+print(car1.get_info())   
