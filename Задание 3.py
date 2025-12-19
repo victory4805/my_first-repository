@@ -1,17 +1,5 @@
-#def is_prime(number):
- #   if number <= 1:
- #       return False
- #   for i in range (2, int(number**0.5) + 1):
- #       if number % i == 0:
- #           return False
-#    return True
-#print(is_prime(7))
+from my_package import number_operations
+print(f"2 в степени 8: {number_operations.power(2, 8)}")
 
-def is_prime(number):
-    if number < 2:
-        return False
-    for i in range(2, number):
-        if number % i == 0:
-            return False
-    return True
-print(is_prime(7))
+from my_package.file_operations import create_file
+create_file("test.txt")
