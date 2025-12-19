@@ -1,0 +1,13 @@
+class Book:
+    def __init__(self, title: str, author: str, year: int):
+        self.title = title    # атрибут
+        self.author = author  # атрибут
+        self.year = year      # атрибут
+
+    def get_info(self) -> str:           # метод
+        return  f'Название книги: {self.title}, Автор: {self.author}, Год издания: {self.year}'
+    
+book1 = Book('Маленький принц', 'Антуана де Сент-Экзюпери', 1943)
+book2 = Book('Гарри Поттер и философский камень', 'Дж. К. Роулинг', 1997)
+
+print(book2.get_info())
