@@ -1,0 +1,16 @@
+class Circle:
+    def __init__(self, radius: float):
+        self.radius = radius
+
+    def get_radius(self) -> float:
+        return self.radius
+    
+    def set_radius(self, new_radius: float):
+        self.radius = new_radius
+
+circle1 = Circle(5.0)
+circle2 = Circle(6.0)
+print(f'Текущий радиус: {circle2.get_radius()}')
+
+circle2.set_radius(8.0)
+print(f'Новый радиус: {circle2.get_radius()}')
